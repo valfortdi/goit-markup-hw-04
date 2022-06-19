@@ -19,6 +19,7 @@
   --icon-hover-color: rgba(33, 150, 243, 1);
   --icon-feature-bg-color: #F5F4FA;
   --footer-icon-color: rgba(255, 255, 255, 0.1);
+  --do-item-desc-color: rgba(47, 48, 58, 0.8);
 }
 body {
   font-family: var(--main-font );
@@ -190,8 +191,8 @@ color: var(--mail-phone-color);
   padding-bottom: 200px;
   margin-left: auto;
   margin-right: auto;
-  background: var(--bg-dark-color);
-  background-image: url(../images/background/background_main.png), linear-gradient(to bottom, var(--gradient-color), var(--gradient-color));
+  background-image: linear-gradient(to bottom, var(--gradient-color), var(--gradient-color)), url(../images/background/background_main.png);
+  background-color: var(--bg-dark-color);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -305,11 +306,38 @@ color: var(--main-black-color);
 }
 
 .do-list-item {
+  position: relative;
   margin-right: 30px;
 }
 
 .do-list-item:last-child{
   margin-right: 0;
+}
+
+.do-item-desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--do-item-desc-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white);
+
+}
+
+.do-item-desc::before {
+  
+  
 }
 
 /* Team */
@@ -399,12 +427,12 @@ border-radius: 0px 0px 4px 4px;
 }
 
 .socials-link:hover,
-.socials-link:hover {
+.socials-link:focus {
   background-color: var(--icon-hover-color);
 }
 
 .socials-link:hover .socials-icon,
-.socials-link:hover .socials-icon {
+.socials-link:focus .socials-icon {
 
   fill: var(--white);
 
@@ -667,12 +695,12 @@ bottom: 20px;
 }
 
 .footer-socials-link:hover,
-.footer-socials-link:hover {
+.footer-socials-link:focus {
   background-color: var(--icon-hover-color);
 }
 
 .footer-socials-link:hover .footer-socials-icon,
-.footer-socials-link:hover .footer-socials-icon {
+.footer-socials-link:focus .footer-socials-icon {
 
   fill: var(--white);
 
