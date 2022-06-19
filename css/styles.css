@@ -627,12 +627,16 @@ line-height: 1.14;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 color: var(--white);
+position: relative;
+bottom: 20px;
 }
 
 .footer-socials {
   display: flex;
   align-items: center;
   justify-content: auto;
+  position: relative;
+  bottom: 20px;
 }
 
 .footer-socials-items {
@@ -658,6 +662,7 @@ color: var(--white);
 
 .footer-socials-icon {
   fill: var(--white);
+  
   
 }
 
